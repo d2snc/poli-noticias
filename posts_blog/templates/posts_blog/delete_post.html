@@ -1,0 +1,18 @@
+{% extends 'posts_blog/base.html'%}
+
+{% block title %}
+	Add New Post
+{% endblock%}
+
+{% block content %}
+	<div class="new_post">
+		<form method="POST">
+			{% csrf_token%}
+			<h2>Tem certeza ? </h2>
+			<p>Deletar : {{post.titulo}}</p>
+			<div><button>Deletar</button></div>
+		</form>
+		
+	</div>
+
+{% endblock %}
